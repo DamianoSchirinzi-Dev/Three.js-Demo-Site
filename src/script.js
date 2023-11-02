@@ -86,7 +86,6 @@ fontLoader.load("fonts/helvetiker_regular.typeface.json", (font) => {
 
   const material = new THREE.MeshNormalMaterial({
     map: texture,
-    color: "white",
   });
 
   const text1Mesh = new THREE.Mesh(text1Geometry, material);
