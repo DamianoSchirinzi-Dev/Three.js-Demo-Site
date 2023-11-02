@@ -18,7 +18,7 @@ const canvas = document.querySelector("canvas.webgl");
 
 // Scene
 const scene = new THREE.Scene();
-scene.background = new THREE.Color('#db8dfc');
+scene.background = new THREE.Color('#e1adf7');
 
 // Groups
 const textGroup = new THREE.Group();
@@ -26,6 +26,9 @@ const torusGroup = new THREE.Group();
 scene.add(torusGroup);
 const boxGroup = new THREE.Group();
 scene.add(boxGroup);
+
+gui.add(torusGroup, 'visible').name('Toggle Donuts');
+gui.add(boxGroup, 'visible').name('Toggle Boxes');
 
 /**
  * Textures
@@ -36,7 +39,7 @@ const texture = textureLoader.load("/textures/normals/RV_1_Normal set02.png");
 // Fonts
 const fontLoader = new FontLoader();
 fontLoader.load("fonts/helvetiker_regular.typeface.json", (font) => {
-  const text1Geometry = new TextGeometry("Creative Developer", {
+  const text1Geometry = new TextGeometry("Hey bean head", {
     font: font,
     size: 0.5,
     height: 0.2,
@@ -51,7 +54,7 @@ fontLoader.load("fonts/helvetiker_regular.typeface.json", (font) => {
   text1Geometry.computeBoundingBox();
   text1Geometry.center();
 
-  const text2Geometry = new TextGeometry("Full Stack", {
+  const text2Geometry = new TextGeometry("love you", {
     font: font,
     size: 0.5,
     height: 0.2,
@@ -66,7 +69,7 @@ fontLoader.load("fonts/helvetiker_regular.typeface.json", (font) => {
   text2Geometry.computeBoundingBox();
   text2Geometry.center();
 
-  const text3Geometry = new TextGeometry("Curious Human", {
+  const text3Geometry = new TextGeometry("sooooo much!", {
     font: font,
     size: 0.5,
     height: 0.2,
@@ -166,7 +169,7 @@ const camera = new THREE.PerspectiveCamera(
   100
 );
 
-camera.position.z = 4;
+camera.position.z = 6;
 scene.add(camera);
 
 const ambientLight = new THREE.AmbientLight("white", 1);
