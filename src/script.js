@@ -39,7 +39,7 @@ const texture = textureLoader.load("/textures/normals/RV_1_Normal set02.png");
 // Fonts
 const fontLoader = new FontLoader();
 fontLoader.load("fonts/helvetiker_regular.typeface.json", (font) => {
-  const text1Geometry = new TextGeometry("Hey bean head", {
+  const text1Geometry = new TextGeometry("Creative Developer", {
     font: font,
     size: 0.5,
     height: 0.2,
@@ -54,7 +54,7 @@ fontLoader.load("fonts/helvetiker_regular.typeface.json", (font) => {
   text1Geometry.computeBoundingBox();
   text1Geometry.center();
 
-  const text2Geometry = new TextGeometry("love you", {
+  const text2Geometry = new TextGeometry("Full Stack Engineer", {
     font: font,
     size: 0.5,
     height: 0.2,
@@ -69,7 +69,7 @@ fontLoader.load("fonts/helvetiker_regular.typeface.json", (font) => {
   text2Geometry.computeBoundingBox();
   text2Geometry.center();
 
-  const text3Geometry = new TextGeometry("sooooo much!", {
+  const text3Geometry = new TextGeometry("Inquisitive Human", {
     font: font,
     size: 0.5,
     height: 0.2,
@@ -92,10 +92,10 @@ fontLoader.load("fonts/helvetiker_regular.typeface.json", (font) => {
   const text1Mesh = new THREE.Mesh(text1Geometry, material);
   textGroup.add(text1Mesh);
   const text2Mesh = new THREE.Mesh(text2Geometry, material);
-  text2Mesh.position.y = -0.7;
+  text2Mesh.position.y = -0.8;
   textGroup.add(text2Mesh);
   const text3Mesh = new THREE.Mesh(text3Geometry, material);
-  text3Mesh.position.y = -1.4;
+  text3Mesh.position.y = -1.6;
   textGroup.add(text3Mesh);
   scene.add(textGroup);
 
